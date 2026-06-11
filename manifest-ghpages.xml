@@ -4,7 +4,7 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="MailApp">
   <Id>679ABAA9-71A9-43E7-AF3A-6D563559082C</Id>
-  <Version>1.0.0.5</Version>
+  <Version>1.0.0.6</Version>
   <ProviderName>UreTech</ProviderName>
   <DefaultLocale>it-IT</DefaultLocale>
   <DisplayName DefaultValue="UreTech Signature"/>
@@ -122,12 +122,14 @@
 
           </DesktopFormFactor>
 
-          <!-- MOBILE: Outlook iOS + Android (solo OnNewMessageCompose) -->
+          <!-- MOBILE: Outlook iOS + Android. SOLO OnNewMessageCompose: e' la config
+               confermata funzionante su iPhone. OnMessageFromChanged su mobile richiede
+               client >= 4.2502.0 e sulle condivise non e' supportato comunque -> rimosso
+               per non rischiare di rompere l'attivazione mobile su client non recenti. -->
           <MobileFormFactor>
             <ExtensionPoint xsi:type="LaunchEvent">
               <LaunchEvents>
                 <LaunchEvent Type="OnNewMessageCompose" FunctionName="checkSignature" />
-                <LaunchEvent Type="OnMessageFromChanged" FunctionName="onFromChanged" />
               </LaunchEvents>
               <SourceLocation resid="Autorun" />
             </ExtensionPoint>
