@@ -113,6 +113,7 @@
               <LaunchEvents>
                 <LaunchEvent Type="OnNewMessageCompose" FunctionName="checkSignature" />
                 <LaunchEvent Type="OnNewAppointmentOrganizer" FunctionName="checkSignature" />
+                <LaunchEvent Type="OnMessageFromChanged" FunctionName="onFromChanged" />
               </LaunchEvents>
               <SourceLocation resid="Autorun" />
             </ExtensionPoint>
@@ -124,6 +125,7 @@
             <ExtensionPoint xsi:type="LaunchEvent">
               <LaunchEvents>
                 <LaunchEvent Type="OnNewMessageCompose" FunctionName="checkSignature" />
+                <LaunchEvent Type="OnMessageFromChanged" FunctionName="onFromChanged" />
               </LaunchEvents>
               <SourceLocation resid="Autorun" />
             </ExtensionPoint>
