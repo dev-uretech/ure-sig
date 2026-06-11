@@ -4,7 +4,7 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="MailApp">
   <Id>679ABAA9-71A9-43E7-AF3A-6D563559082C</Id>
-  <Version>1.0.0.1</Version>
+  <Version>1.0.0.5</Version>
   <ProviderName>UreTech</ProviderName>
   <DefaultLocale>it-IT</DefaultLocale>
   <DisplayName DefaultValue="UreTech Signature"/>
@@ -62,6 +62,8 @@
           </Runtimes>
 
           <DesktopFormFactor>
+            <!-- OBBLIGATORIO su Mac per attivare l'add-in nelle caselle condivise (req set 1.13). -->
+            <SupportsSharedFolders>true</SupportsSharedFolders>
             <ExtensionPoint xsi:type="MessageComposeCommandSurface">
               <OfficeTab id="TabDefault">
                 <Group id="mccsG0">
