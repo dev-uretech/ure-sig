@@ -4,13 +4,13 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="MailApp">
   <Id>C341AD31-BF7A-4C1D-99F1-D2E5896BEB0A</Id>
-  <Version>1.0.0.1</Version>
+  <Version>1.0.0.3</Version>
   <ProviderName>UreTech</ProviderName>
   <DefaultLocale>it-IT</DefaultLocale>
   <DisplayName DefaultValue="UreTech Signature"/>
   <Description DefaultValue="Firma aziendale automatica in composizione (nuove, risposte, inoltri)."/>
-  <IconUrl DefaultValue="https://signature.uretech.it/assets/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://signature.uretech.it/assets/icon-128.png"/>
+  <IconUrl DefaultValue="https://www.uretech.it/wp-content/uploads/2026/03/accent-uretech.png"/>
+  <HighResolutionIconUrl DefaultValue="https://www.uretech.it/wp-content/uploads/2026/03/accent-uretech.png"/>
   <SupportUrl DefaultValue="https://www.contoso.com/help"/>
   <AppDomains>
     <AppDomain>https://www.contoso.com</AppDomain>
@@ -62,6 +62,7 @@
           </Runtimes>
 
           <DesktopFormFactor>
+            <SupportsSharedFolders>true</SupportsSharedFolders>
             <ExtensionPoint xsi:type="MessageComposeCommandSurface">
               <OfficeTab id="TabDefault">
                 <Group id="mccsG0">
@@ -134,9 +135,9 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon16x16" DefaultValue="https://signature.uretech.it/assets/icon-16.png"></bt:Image>
-          <bt:Image id="Icon32x32" DefaultValue="https://signature.uretech.it/assets/icon-32.png"></bt:Image>
-          <bt:Image id="Icon80x80" DefaultValue="https://signature.uretech.it/assets/icon-80.png"></bt:Image>
+          <bt:Image id="Icon16x16" DefaultValue="https://www.uretech.it/wp-content/uploads/2026/03/accent-uretech.png"></bt:Image>
+          <bt:Image id="Icon32x32" DefaultValue="https://www.uretech.it/wp-content/uploads/2026/03/accent-uretech.png"></bt:Image>
+          <bt:Image id="Icon80x80" DefaultValue="https://www.uretech.it/wp-content/uploads/2026/03/accent-uretech.png"></bt:Image>
         </bt:Images>
         <bt:Urls>
           <bt:Url id="residUrl0" DefaultValue="https://signature.uretech.it/editsignature.html"></bt:Url>
