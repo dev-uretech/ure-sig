@@ -1,0 +1,1 @@
+function is_valid_data(t){return null!=t&&""!==t}function get_cal_offset(){return"<br/><br/>"}window.is_valid_data=is_valid_data,window.get_cal_offset=get_cal_offset;
