@@ -4,7 +4,7 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="MailApp">
   <Id>679ABAA9-71A9-43E7-AF3A-6D563559082C</Id>
-  <Version>1.0.0.8</Version>
+  <Version>1.0.0.9</Version>
   <ProviderName>UreTech</ProviderName>
   <DefaultLocale>it-IT</DefaultLocale>
   <DisplayName DefaultValue="UreTech Signature"/>
@@ -143,9 +143,12 @@
           <bt:Image id="Icon80x80" DefaultValue="https://dev-uretech.github.io/ure-sig/assets/icon-80.png"></bt:Image>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="residUrl0" DefaultValue="https://dev-uretech.github.io/ure-sig/editsignature.html?v=7"></bt:Url>
-          <bt:Url id="Autorun" DefaultValue="https://dev-uretech.github.io/ure-sig/autorunweb.html?v=7"></bt:Url>
-          <bt:Url id="runtimeJs" DefaultValue="https://dev-uretech.github.io/ure-sig/autorunshared.js?v=7"></bt:Url>
+          <!-- URL PULITI senza query string: il '?v=' su SourceLocation rompe l'attivazione
+               event-based su Android (office-js #6244). Il cache-bust è sul NOME FILE del
+               bundle JS (autorun.<contenthash>.js, referenziato dentro autorunweb.html). -->
+          <bt:Url id="residUrl0" DefaultValue="https://dev-uretech.github.io/ure-sig/editsignature.html"></bt:Url>
+          <bt:Url id="Autorun" DefaultValue="https://dev-uretech.github.io/ure-sig/autorunweb.html"></bt:Url>
+          <bt:Url id="runtimeJs" DefaultValue="https://dev-uretech.github.io/ure-sig/autorunshared.js"></bt:Url>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="residGL0" DefaultValue="Signature Injector"></bt:String>
