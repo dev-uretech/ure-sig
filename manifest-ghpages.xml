@@ -122,14 +122,14 @@
 
           </DesktopFormFactor>
 
-          <!-- MOBILE: Outlook iOS + Android. SOLO OnNewMessageCompose: e' la config
-               confermata funzionante su iPhone. OnMessageFromChanged su mobile richiede
-               client >= 4.2502.0 e sulle condivise non e' supportato comunque -> rimosso
-               per non rischiare di rompere l'attivazione mobile su client non recenti. -->
+          <!-- MOBILE: Outlook iOS + Android.
+               OnMessageFromChanged e' documentato come supportato su mobile (Android/iOS >= 4.2502.0);
+               lo teniamo. Su client piu' vecchi gli eventi non riconosciuti vengono ignorati. -->
           <MobileFormFactor>
             <ExtensionPoint xsi:type="LaunchEvent">
               <LaunchEvents>
                 <LaunchEvent Type="OnNewMessageCompose" FunctionName="checkSignature" />
+                <LaunchEvent Type="OnMessageFromChanged" FunctionName="onFromChanged" />
               </LaunchEvents>
               <SourceLocation resid="Autorun" />
             </ExtensionPoint>
